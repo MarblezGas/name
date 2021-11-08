@@ -1,6 +1,5 @@
-
-
-if game.PlaceId = 155615604 then 
+-- Cred: gasoline#7987
+if game.PlaceId == 155615604 then 
     local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
     local Window = Library.CreateLib("Gasoline Hub | Prison Life", "DarkTheme")
  
@@ -151,6 +150,20 @@ end)
 local Teleports = Window:NewTab("Teleports")
 local TeleportsSection = Teleports:NewSection("Teleports")
 
-MainSection:NewDropdown("Quick Teleports", {"Criminal Base", "Prison Yard", "Police Room", "The City", "The roof"}, function()
-    Print("Not finished yet")
-    end)
+TeleportsSection:NewButton("Prison Yard", "Teleports you to the prison yard", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(CoordinatesHere)
+end)
+
+TeleportsSection:NewButton("Criminal Base", "Teleports you to the Criminal Base", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(CoordinatesHere)
+end)
+
+TeleportsSection:NewButton("Cop Room", "Teleports you to the Cop room (Fr idk what to name it)", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(CoordinatesHere)
+end)
+
+TeleportsSection:NewButton("Roof", "Teleports you to the Roof", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(CoordinatesHere)
+end)
+
+
