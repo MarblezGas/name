@@ -1,6 +1,6 @@
 
-if game.PlaceId == 155615604 then
-end
+
+if game.PlaceId = 155615604 then 
     local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
     local Window = Library.CreateLib("Gasoline Hub | Prison Life", "DarkTheme")
  
@@ -56,7 +56,7 @@ end)
 plr = game.Players.LocalPlayer
 mouse = plr:GetMouse()
 mouse.KeyDown:connect(function(key)
-if key == "q" then --you can change it to whatever letter you want
+if key == "q" then 
 noclip = not noclip
 game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
 end
@@ -146,4 +146,11 @@ end)
     end 
     end)
     Fly()
+end)
+
+local Teleports = Window:NewTab("Teleports")
+local TeleportsSection = Teleports:NewSection("Teleports")
+
+MainSection:NewDropdown("Quick Teleports", {"Criminal Base", "Prison Yard", "Police Room", "The City", "The roof"}, function()
+    Print("Not finished yet")
     end)
