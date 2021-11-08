@@ -1,5 +1,8 @@
--- Cred: gasoline#7987
+
+
+
 if game.PlaceId == 155615604 then 
+end
     local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
     local Window = Library.CreateLib("Gasoline Hub | Prison Life", "DarkTheme")
  
@@ -150,20 +153,37 @@ end)
 local Teleports = Window:NewTab("Teleports")
 local TeleportsSection = Teleports:NewSection("Teleports")
 
-TeleportsSection:NewButton("Prison Yard", "Teleports you to the prison yard", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(CoordinatesHere)
+TeleportsSection:NewButton("Criminal Base (WAIT 3 SECS TO GET UNSTUCK)", "Teleports you to the criminal base", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-920.511, 92.2272, 2138.27)
+    
 end)
 
-TeleportsSection:NewButton("Criminal Base", "Teleports you to the Criminal Base", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(CoordinatesHere)
+TeleportsSection:NewButton("Cop room", "Teleports you to the cop room", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(857.083, 97.1001, 2307.84)
 end)
 
-TeleportsSection:NewButton("Cop Room", "Teleports you to the Cop room (Fr idk what to name it)", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(CoordinatesHere)
+local ChangeTeam = Window:NewTab("Change Teams")
+local ChangeTeamSection = ChangeTeam:NewSection("Choose a team")
+
+ChangeTeamSection:NewButton("Natural Team (Recommended)", "Changes your team to natural", function()
+    local savedteam = game.Players.LocalPlayer.TeamColor.Name
+    workspace.Remote.TeamEvent:FireServer("Medium stone grey")
 end)
 
-TeleportsSection:NewButton("Roof", "Teleports you to the Roof", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(CoordinatesHere)
+ChangeTeamSection:NewButton("TRIGGERS ANTICHEAT DONT USE", "Changes your team to criminal", function()
+    local savedteam = game.Players.LocalPlayer.TeamColor.Name
+    workspace.Remote.TeamEvent:FireServer("Really red")
 end)
 
+ChangeTeamSection:NewButton("Cop Team", "Changes your team to cop (ik it sounds lame)", function()
+    local savedteam = game.Players.LocalPlayer.TeamColor.Name
+    workspace.Remote.TeamEvent:FireServer("Bright blue")
+end)
+
+local AddOnGui = Window:NewTab("AddOn Guis")
+local AddOnGuiSection = AddOnGui:NewSection("AddOn Guis")
+
+AddOnGuiSection:NewButton("Kill people GUI", "Executes a built in GUI", function() 
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarblezGas/name1/main/wt'),true))()
+end)
 
