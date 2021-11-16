@@ -600,3 +600,7 @@ local AddOnGuiSection = AddOnGui:NewSection("AddOn Guis")
 AddOnGuiSection:NewButton("Kill people GUI", "Executes a built in GUI", function() 
 	loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarblezGas/name1/main/wt'),true))()
 end)
+
+AddOnGuiSection:NewButton("Infinite Yield", "Executes a built in GUI (Not owned by the devs)", function() 
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+end)
